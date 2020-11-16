@@ -49,3 +49,20 @@ function edit_green(){
     });
 }
 edit_green();
+
+//fonctionnalité 5
+function remove_bootstrap(){
+    var getNav = document.querySelector('header')
+    getNav.addEventListener("dblclick", () => {
+        if (document.styleSheets[0].disabled === true)
+        {
+            document.styleSheets[0].disabled = false;
+        }
+        else
+        {
+            document.styleSheets[0].disabled = true;
+        }
+    });
+}
+remove_bootstrap();
+
