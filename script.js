@@ -66,3 +66,27 @@ function remove_bootstrap(){
 }
 remove_bootstrap();
 
+//fonctionnalité 6
+function minimize() {
+    var cards = document.querySelectorAll(".card");
+    cards.forEach(card => {
+      var status = false;
+      var btn = card.querySelector(".btn-success");
+      var img = card.querySelector(".card-img-top");
+      btn.addEventListener("mouseenter", () => {
+        card.querySelector("p.card-text").toggleAttribute("hidden");
+        if (status === false) 
+        {
+          img.setAttribute("style", "width:20%");
+          status = true;
+        }
+        else if (status === true) 
+        {
+          img.setAttribute("style", "width:100%");
+          status = false;
+        }
+      })
+    });
+  }
+  minimize();
+  
